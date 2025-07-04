@@ -1,0 +1,5 @@
+{
+  "name": "SkkillQuest Code Reviewer",
+  "description": "An intelligent tool that leverages the Gemini API to perform automated code reviews, providing detailed feedback on bugs, performance, style, and readability.",
+  "requestFramePermissions": []
+}
