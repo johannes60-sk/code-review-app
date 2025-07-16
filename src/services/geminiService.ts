@@ -116,7 +116,7 @@ export const reviewCode = async (code: string, language: string, principles: str
   const prompt = generateReviewPrompt(code, language, principles, uiLang);
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash-preview-04-17",
+      model: "gemini-2.5-flash",
       contents: prompt,
       config: { responseMimeType: "application/json", temperature: 0.2 }
     });
@@ -138,7 +138,7 @@ export const generateTests = async (code: string, language: string, uiLang: UILa
     const prompt = generateTestPrompt(code, language, uiLang);
     try {
         const response = await ai.models.generateContent({
-            model: "gemini-2.5-flash-preview-04-17",
+            model: "gemini-2.5-flash",
             contents: prompt,
             config: { temperature: 0.3 }
         });
@@ -155,7 +155,7 @@ export const explainCode = async (code: string, language: string, uiLang: UILang
     const prompt = generateExplainPrompt(code, language, uiLang);
     try {
         const response = await ai.models.generateContent({
-            model: "gemini-2.5-flash-preview-04-17",
+            model: "gemini-2.5-flash",
             contents: prompt,
             config: { temperature: 0.5 }
         });
@@ -172,7 +172,7 @@ export const generateDocs = async (code: string, language: string, uiLang: UILan
     const prompt = generateDocsPrompt(code, language, uiLang);
     try {
         const response = await ai.models.generateContent({
-            model: "gemini-2.5-flash-preview-04-17",
+            model: "gemini-2.5-flash",
             contents: prompt,
             config: { temperature: 0.3 }
         });
